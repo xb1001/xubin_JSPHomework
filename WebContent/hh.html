@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="jquery-1.12.4.min.js" type="text/javascript"></script>
+
+<script src="Convertor.js" type="text/javascript"></script>
+</head>
+<body>
+<script>
+	 $(document).ready(function(){
+		var c = new Convertor();
+		var r0 = ({lng:124,lat:33});
+		console.log(r0);
+		var r1 = c.WGS2BD09({ lng: 124, lat: 33 });
+		console.log(r1);
+		
+		var r2 = c.BD092WGS({ lng: 124.01145734572263, lat: 33.00401664734286 });
+		console.log(r2); 
+	});
+</script>
+</body>
+</html>
